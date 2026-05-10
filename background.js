@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 async function editNetSuiteTabs(selectedTabId) {
   const tabs = await chrome.tabs.query({
-    url: "https://4635302.app.netsuite.com/*"
+    url: "https://4635302.app.netsuite.com/app/common/item/*"
   });
 
   await Promise.all(tabs.map(async (tab) => {
