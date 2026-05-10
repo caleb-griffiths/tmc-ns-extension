@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caleb's NetSuite Extension</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 240px;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #000000;
+      color: #f1f1f1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("popup-background.png") center center / 350px auto no-repeat;
+      opacity: 0.125;
+      z-index: 0;
+    }
+
+    .popup {
+      position: relative;
+      z-index: 1;
+      padding: 12px;
+      background: transparent;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      color: #a8a8a8;
+      margin-bottom: 12px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      color: #9a9a9a;
+      margin: 12px 0 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      font-weight: 700;
+    }
+
+    button {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 7px;
+      padding: 9px 10px;
+      margin-bottom: 7px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 13px;
+      color: #f1f1f1;
+      background: rgba(30, 30, 30, 0.45);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.08s ease;
+    }
+
+    button:hover {
+      background: rgba(45, 45, 45, 0.55);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .help {
+        margin-top: 2px;
+        background: rgba(30, 30, 30, 0.45);
+        color: #f1f1f1;
+        border-color: rgba(255, 255, 255, 0.12);
+        font-weight: 700;
+    }
+
+    .help:hover {
+        background: rgba(45, 45, 45, 0.6);
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .cancel {
+      margin-top: 2px;
+      background: rgba(80, 15, 15, 0.45);
+      color: #ffb4b4;
+      border-color: rgba(255, 100, 100, 0.22);
+      font-weight: 700;
+    }
+
+    .cancel:hover {
+      background: rgba(100, 20, 20, 0.6);
+      border-color: rgba(255, 100, 100, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="popup">
+    <div class="title">Caleb's NetSuite Extension</div>
+    <div class="subtitle">Simple tool to bulk-edit multiple tabs</div>
+
+    <div class="section-label">Edit</div>
+
+    <button data-tab-id="custom88">Inventory</button>
+    <button data-tab-id="custom99">Technical Data</button>
+    <button data-tab-id="inventory">Purchasing</button>
+    <button data-tab-id="pricing">Sales/Pricing</button>
+    <button data-tab-id="accounting">Matrix</button>
+    <button data-tab-id="store">Website</button>
+    <button data-tab-id="custom104">Stock Projection</button>
+
+    <div class="section-label">Actions</div>
+
+    <button id="help" class="help">Help</button>
+    <button id="cancel" class="cancel">Cancel</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
