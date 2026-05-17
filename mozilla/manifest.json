@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "Caleb's NetSuite Extension",
+    "version": "1.0",
+    "description": "",
+    
+    "icons": {
+        "128": "icon.png"
+    },
+
+    "action": {
+        "default_icon": {
+            "128": "icon.png"
+        },
+        "default_title": "Caleb's NetSuite Extension",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "tabs",
+        "scripting"
+    ],
+
+    "host_permissions": [
+        "https://4635302.app.netsuite.com/*"
+    ],
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "tmc-ns-extension@themetalcompany.co.nz",
+            "script_min_version": "109.0"
+        }
+    }
+}
