@@ -22,7 +22,7 @@ browser.runtime.onMessage.addListener((message) => {
 
 async function editNetSuiteTabs(selectedTabId) {
     const tabs = await browser.tabs.query({
-        url: "https//4635302.app.netsuite.com/app/common/item/*"
+        url: "https://4635302.app.netsuite.com/app/common/item/*"
     });
 
     for (const tab of tabs) {
