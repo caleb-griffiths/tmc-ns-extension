@@ -30,7 +30,7 @@ document.getElementById("help").addEventListener("click", async () => {
 });
 
 document.getElementById("cancel").addEventListener("click", () => {
-    sendMessgae({
+    sendMessage({
         action: "cancelTabs"
     });
 });
